@@ -24,6 +24,11 @@ describe('ProjectTeamsSettings', function() {
       method: 'GET',
       body: [team],
     });
+    Client.addMockResponse({
+      url: `/organizations/${org.slug}/teams/`,
+      method: 'GET',
+      body: [team],
+    });
   });
 
   describe('render()', function() {
